@@ -1,4 +1,4 @@
-FROM unit:php8.4
+FROM ghcr.io/freeunitorg/freeunit:latest-php8.5
 
 RUN apt-get update && apt-get install -y gettext-base git unzip netcat-traditional nano iputils-ping procps sudo supervisor \
 	&& curl --fail -sSL https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
