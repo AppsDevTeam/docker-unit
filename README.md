@@ -2,7 +2,7 @@
 
 Docker image založený na [FreeUnit](https://github.com/freeunitorg/freeunit) (PHP 8.5) s předinstalovanými nástroji (Composer, supervisor, sendmail, …) a PHP rozšířeními (`intl`, `pdo_mysql`, `sockets`, `zip`).
 
-Image je publikován na Docker Hubu jako [`appsdevteam/unit`](https://hub.docker.com/r/appsdevteam/unit) pro platformy `linux/amd64` a `linux/arm64`.
+Image je publikován na Docker Hubu jako [`appsdevteam/unit`](https://hub.docker.com/r/appsdevteam/unit) pro platformy `linux/amd64` a `linux/arm64`. Dostupné tagy: `latest`, `8.5` a `8.4`.
 
 ## Build
 
@@ -29,6 +29,7 @@ Build pro obě architektury a push:
 docker buildx build \
   --platform linux/amd64,linux/arm64 \
   -t appsdevteam/unit:latest \
+  -t appsdevteam/unit:8.5 \
   --push .
 ```
 
